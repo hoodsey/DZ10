@@ -15,25 +15,47 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
     @Test
-    public void shouldSetincreaseVolume() {
+    public void shouldSetIncreaseNumber() {
         Radio radio = new Radio();
-        radio.currentVolume = 7;
-        radio.nextVolume();
+        radio.currentNumber = 7;
+        radio.nextNumber();
         int expected = 8;
 
-        long actual = radio.currentVolume;
+        long actual = radio.currentNumber;
 
         assertEquals(expected, actual);
     }
     @Test
-    public void shouldSetNextVolue() {
+    public void shouldSetReduceNumber() {
         Radio radio = new Radio();
-        radio.currentVolume = 9;
-        radio.nextVolume();
-        int expected = 0;
+        radio.currentNumber = 7;
+        radio.prevNumber();
+        int expected = 6;
 
-        long actual = radio.currentVolume;
+        long actual = radio.currentNumber;
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldSetPrevNumber() {
+        Radio radio = new Radio();
+        radio.currentNumber = 0;
+        radio.prevNumber();
+        int expected = 10;
+
+        long actual = radio.currentNumber;
 
        assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldSetNextNumber() {
+        Radio radio = new Radio();
+        radio.currentNumber = 9;
+        radio.nextNumber();
+        int expected = 0;
+
+        long actual = radio.currentNumber;
+
+        assertEquals(expected, actual);
     }
 }
