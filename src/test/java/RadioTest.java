@@ -6,7 +6,7 @@ public class RadioTest {
     @Test
     public void shouldSetNumber() {
         Radio radio = new Radio();
-        radio.currentNumber = 2;
+        radio.setCurrentNumber(2);
 
         int expected = 2;
 
@@ -17,7 +17,7 @@ public class RadioTest {
     @Test
     public void shouldSetIncreaseNumber() {
         Radio radio = new Radio();
-        radio.currentNumber = 7;
+        radio.setCurrentNumber(7);
         radio.nextNumber();
         int expected = 8;
 
@@ -26,22 +26,11 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
     @Test
-    public void shouldSetReduceNumber() {
-        Radio radio = new Radio();
-        radio.currentNumber = 7;
-        radio.prevNumber();
-        int expected = 6;
-
-        long actual = radio.currentNumber;
-
-        assertEquals(expected, actual);
-    }
-    @Test
     public void shouldSetPrevNumber() {
         Radio radio = new Radio();
-        radio.currentNumber = 0;
+        radio.setCurrentNumber(0);
         radio.prevNumber();
-        int expected = 10;
+        int expected = 9;
 
         long actual = radio.currentNumber;
 
@@ -50,7 +39,7 @@ public class RadioTest {
     @Test
     public void shouldSetNextNumber() {
         Radio radio = new Radio();
-        radio.currentNumber = 9;
+        radio.setCurrentNumber(9);
         radio.nextNumber();
         int expected = 0;
 

@@ -26,5 +26,29 @@ public class Radio {
             reduceNumber();
         }
     }
+    public void setCurrentNumber( int newCurrentNumber) {//метод-сеттер номера
+        if(newCurrentNumber<0 || newCurrentNumber>10){
+            return;
+        }
+        currentNumber = newCurrentNumber;
+    }
+
+    public void increaseVolume() {  //метод увеличения звука на 1
+        if (currentVolume < 10 ) {
+            currentVolume = currentVolume + 1;
+        }
+    }
+    public void reduceVolume() {  //метод уменьшения звука на 1
+        if (currentVolume > 0 ) {
+            currentVolume = currentVolume - 1;
+        }
+    }
+    public void nextVolume() {//метод перекллючения номера по кнопке next
+        if (currentNumber == 9) {
+            currentNumber = 0;
+        } else {
+            increaseNumber();
+        }
+    }
 
 }
