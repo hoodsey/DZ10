@@ -44,10 +44,10 @@ public class Radio {
         }
     }
     public void nextVolume() {//метод перекллючения номера по кнопке next
-        if (currentNumber == 9) {
-            currentNumber = 0;
+        if (currentVolume == 9) {
+           return;
         } else {
-            increaseNumber();
+            increaseVolume();
         }
     }
 

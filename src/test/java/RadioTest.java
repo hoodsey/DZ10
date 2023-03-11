@@ -47,4 +47,15 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+    @Test
+    public void shouldSetNextValue() {
+        Radio radio = new Radio();
+        radio.currentVolume = 9;
+        radio.nextVolume();
+        int expected = 9;
+
+        long actual = radio.currentVolume;
+
+        assertEquals(expected, actual);
+    }
 }
