@@ -15,13 +15,24 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
     @Test
+    public void shouldSetincreaseVolume() {
+        Radio radio = new Radio();
+        radio.currentVolume = 7;
+        radio.nextVolume();
+        int expected = 8;
+
+        long actual = radio.currentVolume;
+
+        assertEquals(expected, actual);
+    }
+    @Test
     public void shouldSetNextVolue() {
         Radio radio = new Radio();
         radio.currentVolume = 9;
         radio.nextVolume();
         int expected = 0;
 
-        long actual = radio.currentNumber;
+        long actual = radio.currentVolume;
 
        assertEquals(expected, actual);
     }
