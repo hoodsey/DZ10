@@ -57,6 +57,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentNumber(7);
         radio.setCurrentNumber(22);
+        radio.setCurrentNumber(-3);
         int expected = 7;
 
         long actual = radio.currentNumber;
