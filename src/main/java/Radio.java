@@ -1,6 +1,6 @@
 public class Radio {
-    public int currentNumber;//Номер текущей радиостанции
-    public int currentVolume;//Громкость звука
+    private int currentNumber;//Номер текущей радиостанции
+    private int currentVolume;//Громкость звука
 
     public void nextNumber() {//метод перекллючения номера по кнопке next
         if (currentNumber == 9) {
@@ -24,7 +24,19 @@ public class Radio {
         }
         currentNumber = newCurrentNumber;
     }
+    public int GetCurrentNumber() {//метод-геттер номера
+            return currentNumber;
+    }
+    public int GetCurrentVolume() {//метод-геттер звука
+        return currentVolume;
+    }
 
+    public void setCurrentVolume(int newCurrentVolume) {//метод-сеттер звука
+        if (newCurrentVolume < 0 || newCurrentVolume > 10) {
+            return;
+        }
+        currentVolume = newCurrentVolume;
+    }
     public void nextVolume() {//метод перекллючения звука по кнопке next
         if (currentVolume == 9) {
             return;
